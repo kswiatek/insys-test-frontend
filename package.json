@@ -1,0 +1,16 @@
+{
+  "name": "insys-test-frontend",
+  "version": "1.0.0",
+  "description": "Insys: test (front-end)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/insysdev/insys-test-frontend.git"
+  },
+  "author": "Insys Dev",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/insysdev/insys-test-frontend#readme"
+}
