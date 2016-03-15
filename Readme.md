@@ -21,4 +21,4 @@ Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych prze
 * ECMAScript 6,
 * MVC / Flux,
 * obsługa URL dla różnych zakładek,
-* wrzucenie projektu na Github.
+* utworzenie repozytorium na Github lub Bitbucket i zbudowanie zadania w myśl Feature Branch Workflow.
