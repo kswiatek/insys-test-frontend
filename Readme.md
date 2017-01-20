@@ -14,12 +14,12 @@ Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych prze
 - https://github.com/google/web-starter-kit
 
 ### Dodatkowe punkty za:
-* użycie npm do dodatkowych bibliotek,
+* użycie npm/yarn,
+* architektura Redux lub MobX,
+* ECMAScript 6,
+* Sass lub CSS Modules,
 * responsywny design,
 * responsywne ikony,
 * semantyczny HTML,
-* Sass lub CSS Modules,
-* ECMAScript 6,
-* architektura Redux, MobX, MVC,
 * obsługa URL dla różnych zakładek,
 * utworzenie repozytorium na Github lub Bitbucket i zbudowanie zadania w myśl [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
