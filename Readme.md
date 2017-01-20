@@ -9,9 +9,7 @@ Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych prze
 * Druga zakładka to galeria zdjęć. Zdjęcia wczytaj, używając w tym celu publicznego Flickr API (https://www.flickr.com/services/feeds/docs/photos_public/). Pobierz tylko 9 najnowszych miniatur Marilyn Monroe.
 * Kliknięcie w zdjęcie powinno otworzyć nowe okno z powiększonym zdjęciem na Flickr.
 * Możesz użyć dowolnych bibliotek, np. React, Redux, Backbone.js, jQuery, Bootstrap, Font Awesome, etc.
-* Jeśli chcesz użyć ES6 lub Sass, możesz użyć dowolnego startera do postawienia środowiska, np:
-- https://github.com/facebookincubator/create-react-app
-- https://github.com/google/web-starter-kit
+* Jeśli chcesz użyć ES6 lub Sass, możesz użyć dowolnego startera do postawienia środowiska, np: https://github.com/facebookincubator/create-react-app
 
 ### Dodatkowe punkty za:
 * użycie npm/yarn,
