@@ -22,3 +22,4 @@ Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych prze
 * semantyczny HTML,
 * obsługa URL dla różnych zakładek,
 * utworzenie repozytorium na Github lub Bitbucket i zbudowanie zadania w myśl [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+* uzycie async/await
