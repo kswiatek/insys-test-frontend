@@ -1,7 +1,7 @@
 # Zadanie testowe - Frontend
 
 ### Zadanie
-Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych przeglądarkach (Chrome, Firefox, IE 11). Celem zadania jest weryfikacja umiejętności pisania w JavaScript, HTML i CSS.
+Na podstawie otrzymanych grafik, stwórz projekt działający w najnowszych przeglądarkach (Chrome, Firefox, Edge) + IE11. Celem zadania jest weryfikacja umiejętności pisania w JavaScript, HTML i CSS.
 
 ### Założenia projektowe:
 * Projekt zawiera navbar z ikonkami - kliknięcie w ikonkę powinno pokazać nową treść w zakładce bez przeładowania strony.
