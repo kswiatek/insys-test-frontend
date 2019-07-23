@@ -6,6 +6,7 @@ const mainContainer = props => {
     return (
         <div className={classes.container}>
             <Navbar />
+            <p>content</p>
         </div>
     );
 }

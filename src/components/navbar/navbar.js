@@ -2,14 +2,17 @@ import React from 'react';
 import classes from './navbar.module.css';
 import Banner from './banner/banner';
 import Menu from './menu/menu';
+import ProfilePhoto from './profilePhoto/profilePhoto';
 
 const navbar = props => {
     return (
-        <React.Fragment>
-            <p>navbar</p>
+        <div className={classes.navbar}>
             <Banner />
             <Menu />
-        </React.Fragment>
+            <div className={classes.profilePhoto}>
+                <ProfilePhoto />
+            </div>
+        </div>
     );
 }
 
