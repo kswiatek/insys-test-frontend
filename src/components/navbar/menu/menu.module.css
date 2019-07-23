@@ -14,10 +14,17 @@
     align-items: center;
 }
 
-.menu > * {
-    margin: 20px;
+.menu > div { /*TODO: change just div to some class*/
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .selected {
-    border: 1px solid black;
+    box-sizing: border-box;
+    border: 1px solid #FFF;
+    border-radius: 50%;
 }

@@ -23,7 +23,6 @@ const Menu = props => {
             break;
         }
         
-        
     }, [props.category]);
 
     let categoryIcons = [];
@@ -33,7 +32,7 @@ const Menu = props => {
         onClick={() => props.onToggleCategory(categories.CATEGORY_DESCRIPTION)}>
             <FontAwesomeIcon 
                     icon={faUser} 
-                    size="lg" 
+                    size="sm" 
                     color="#FFF" 
                     />
             </div>);
@@ -43,7 +42,7 @@ const Menu = props => {
         onClick={() => props.onToggleCategory(categories.CATEGORY_GALLERY)}>
             <FontAwesomeIcon
                     icon={faImage} 
-                    size="2x" 
+                    size="lg" 
                     color="#FFF"
                      />
             </div>);
