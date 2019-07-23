@@ -1,0 +1,10 @@
+.navbar {
+    margin: 0 0 60px 0;
+    position: relative;
+}
+
+.profilePhoto {
+    position: absolute;
+    top: 140px;
+    left: 40px;
+}
