@@ -16,10 +16,12 @@ const mainContainer = props => {
     );
 
     return (
-        <div className={classes.container}>
+        <div className={classes.mainContainer}>
             <Navbar />
-
-            {routes}
+            <div className={classes.contentContainer}>
+                {routes}
+            </div>
+            
 
         </div>
     );
