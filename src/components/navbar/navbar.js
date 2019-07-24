@@ -1,10 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import classes from './navbar.module.css';
 import Banner from './banner/banner';
 import Menu from './menu/menu';
 import ProfilePhoto from './profilePhoto/profilePhoto';
 
-const navbar = props => {
+const navbar = props => { console.log('z navbar his: ', props.history);
     return (
         <div className={classes.navbar}>
             <Banner />
@@ -16,4 +17,4 @@ const navbar = props => {
     );
 }
 
-export default navbar;
+export default withRouter(navbar);

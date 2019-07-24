@@ -1,14 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import Navbar from '../components/navbar/navbar';
+import Profile from '../components/profile/profile';
+import Gallery from './gallery/gallery';
 import classes from './mainContainer.module.css';
 
 const mainContainer = props => {
+    console.log('mainContainer kurła: ', props.history);
+    let routes = (
+        <Switch>
+            <Route path="/profile" exact component={Profile} />
+            <Route path="/gallery" exact component={Gallery} />
+            <Redirect to="/profile" />
+        </Switch>
+    );
+
     return (
         <div className={classes.container}>
             <Navbar />
-            <p>content</p>
+
+            {routes}
+
         </div>
     );
 }
 
-export default mainContainer;
+const mapStateToProps = state => {
+    return {
+        category: state.category
+    }
+};
+
+export default withRouter(connect(mapStateToProps)(mainContainer));
