@@ -1,10 +1,17 @@
 import React from 'react';
+import LoadingImage from './loadingImage/loadingImage';
 import classes from './gallery.module.css';
 
 const gallery = props => {
+
+    let images = [];
+    for (let i = 0; i < 9; i++) {
+        images.push(<LoadingImage />);
+    }
+
     return (
-        <div>
-            <p>gallery cotent</p>
+        <div className={classes.imagesContainer}>
+            {images}
         </div>
     );
 }
