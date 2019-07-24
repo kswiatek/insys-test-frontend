@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../../../store/actions/actions'; 
 import classes from './menu.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,21 +9,20 @@ import { faImage } from '@fortawesome/free-regular-svg-icons';
 import * as categories from '../../../shared/categories';
 
 const Menu = props => {
-
     useEffect(() => {
-        console.log("useEff category w menu.js: ", props.category);
-        const categoryIcons = document.getElementById("categoryIconsContainer").children;
+        const categoryIcons = document.getElementById("categoryIconsContainer").children;   
 
         Array.from(categoryIcons).forEach(icon => icon.className = "");
         switch (props.category) {
             case categories.CATEGORY_DESCRIPTION:
                 Array.from(categoryIcons).find(el => el.id === "userIcon").className = classes.selected;
+                props.history.push('/profile');
             break;
             case categories.CATEGORY_GALLERY:
                 Array.from(categoryIcons).find(el => el.id === "imageIcon").className = classes.selected;
+                props.history.push('/gallery');
             break;
         }
-        
     }, [props.category]);
 
     let categoryIcons = [];
@@ -35,7 +35,7 @@ const Menu = props => {
                     size="sm" 
                     color="#FFF" 
                     />
-            </div>);
+             </div>);
     categoryIcons.push(<div 
         key="imageIcon" 
         id="imageIcon" 
@@ -68,4 +68,4 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Menu));
