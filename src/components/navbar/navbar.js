@@ -5,7 +5,7 @@ import Banner from './banner/banner';
 import Menu from './menu/menu';
 import ProfilePhoto from './profilePhoto/profilePhoto';
 
-const navbar = props => { console.log('z navbar his: ', props.history);
+const navbar = props => {
     return (
         <div className={classes.navbar}>
             <Banner />

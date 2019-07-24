@@ -7,7 +7,6 @@ import Gallery from './gallery/gallery';
 import classes from './mainContainer.module.css';
 
 const mainContainer = props => {
-    console.log('mainContainer kurła: ', props.history);
     let routes = (
         <Switch>
             <Route path="/profile" exact component={Profile} />
