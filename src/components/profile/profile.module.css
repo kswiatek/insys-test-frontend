@@ -1,0 +1,38 @@
+.articleContainer {
+    margin: 0 auto;
+    color: black;
+    font-size: 17px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    font-family: 'arial narrow', sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: gray;
+    margin: 10px 0;
+}
+
+blockquote {
+    color: lightgray;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: serif;
+    border-left: 7px solid #7AD6BB;
+    padding-left: 15px;
+    width: 60%;
+    margin: 50px 40px;
+}
+
+.iconContainer > * {
+    height: 24px;
+    width: 20px;
+    margin-right: 5px;
+}

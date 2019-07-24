@@ -7,7 +7,6 @@ import Gallery from './gallery/gallery';
 import classes from './mainContainer.module.css';
 
 const mainContainer = props => {
-    console.log('mainContainer kurła: ', props.history);
     let routes = (
         <Switch>
             <Route path="/profile" exact component={Profile} />
@@ -17,10 +16,12 @@ const mainContainer = props => {
     );
 
     return (
-        <div className={classes.container}>
+        <div className={classes.mainContainer}>
             <Navbar />
-
-            {routes}
+            <div className={classes.contentContainer}>
+                {routes}
+            </div>
+            
 
         </div>
     );

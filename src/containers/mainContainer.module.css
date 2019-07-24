@@ -1,10 +1,12 @@
-.container {
+.mainContainer {
     width: 900px;
     margin: 0px;
     padding: 0px;
+    margin: 0 auto;
 }
-/* .container:after {
-    content: "";
-    background-color: blueviolet;
-    height: 40px;
-} */
+
+.contentContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+

@@ -5,7 +5,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-    console.log('reducer: ', state, action);
     switch(action.type) {
         case actionTypes.TOGGLE_CATEGORY:
             return {
