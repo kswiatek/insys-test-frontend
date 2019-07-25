@@ -21,8 +21,6 @@ const mainContainer = props => {
             <div className={classes.contentContainer}>
                 {routes}
             </div>
-            
-
         </div>
     );
 }

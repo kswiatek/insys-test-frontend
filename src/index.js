@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 import Reducer from './store/reducers/reducer';
+import { watchSaga } from './store/sagas/index';
 
-const store = createStore(Reducer);
+const composeEnhancers = process.env.NODE_ENV === 'development' ? //TODO: to remove later, IE breaks
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(Reducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
+
+sagaMiddleware.run(watchSaga);
 
 const app = (
     <Provider store={store}>
