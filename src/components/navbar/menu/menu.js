@@ -11,10 +11,13 @@ import * as categories from '../../../shared/categories';
 const Menu = props => {
     useEffect(() => {
         const categoryIcons = document.getElementById("categoryIconsContainer").children;   
+        refreshIcons(categoryIcons, props.category);
+    }, [props.category]);
 
+    const refreshIcons = (categoryIcons, category) => {
         Array.from(categoryIcons).forEach(icon => icon.className = "");
-        switch (props.category) {
-            case categories.CATEGORY_DESCRIPTION:
+        switch (category) {
+            case categories.CATEGORY_PROFILE:
                 Array.from(categoryIcons).find(el => el.id === "userIcon").className = classes.selected;
                 props.history.push('/profile');
             break;
@@ -22,14 +25,20 @@ const Menu = props => {
                 Array.from(categoryIcons).find(el => el.id === "imageIcon").className = classes.selected;
                 props.history.push('/gallery');
             break;
+            default:
+                if (props.history.location.pathname === '/gallery') {
+                    Array.from(categoryIcons).find(el => el.id === "imageIcon").className = classes.selected;
+                } else {
+                    Array.from(categoryIcons).find(el => el.id === "userIcon").className = classes.selected;
+                }
         }
-    }, [props.category]);
+    }
 
     let categoryIcons = [];
     categoryIcons.push(<div 
         key="userIcon" 
-        id="userIcon" 
-        onClick={() => props.onToggleCategory(categories.CATEGORY_DESCRIPTION)}>
+        id="userIcon"
+        onClick={() => props.onToggleCategory(categories.CATEGORY_PROFILE)}>
             <FontAwesomeIcon 
                     icon={faUser} 
                     size="sm" 
@@ -38,7 +47,7 @@ const Menu = props => {
              </div>);
     categoryIcons.push(<div 
         key="imageIcon" 
-        id="imageIcon" 
+        id="imageIcon"
         onClick={() => props.onToggleCategory(categories.CATEGORY_GALLERY)}>
             <FontAwesomeIcon
                     icon={faImage} 

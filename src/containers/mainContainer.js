@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import Navbar from '../components/navbar/navbar';
 import Profile from '../components/profile/profile';
-import Gallery from './gallery/gallery';
 import classes from './mainContainer.module.css';
+
+const Gallery = React.lazy(() => {
+    return import('./gallery/gallery');
+});
 
 const mainContainer = props => {
     let routes = (
         <Switch>
+            <Route path="/gallery" exact render={() => <Gallery />} />
             <Route path="/profile" exact component={Profile} />
-            <Route path="/gallery" exact component={Gallery} />
             <Redirect to="/profile" />
         </Switch>
     );
@@ -19,10 +22,10 @@ const mainContainer = props => {
         <div className={classes.mainContainer}>
             <Navbar />
             <div className={classes.contentContainer}>
-                {routes}
+                <Suspense fallback={<p>Loading gallery...</p>}>
+                    {routes}
+                </Suspense>
             </div>
-            
-
         </div>
     );
 }
