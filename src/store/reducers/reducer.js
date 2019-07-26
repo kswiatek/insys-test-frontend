@@ -1,9 +1,9 @@
 import * as actionTypes from '../actions/actionTypes';
-import * as categories from '../../shared/categories';
 
 const initialState = {
-    category: categories.CATEGORY_DESCRIPTION,
-    images: null
+    category: null,
+    images: null,
+    error: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,18 +15,17 @@ const reducer = (state = initialState, action) => {
             };
         case actionTypes.FETCH_IMAGES:
             return {
-                ...state//,
-                // images: action.images
+                ...state
             }
         case actionTypes.FETCH_IMAGES_START:
             return {
                 ...state
-                //probably redundant
             }
         case actionTypes.FETCH_IMAGES_SUCCESS:
             return {
                 ...state,
-                images: action.images
+                images: action.images,
+                error: null
             }
         case actionTypes.FETCH_IMAGES_FAIL:
             return {

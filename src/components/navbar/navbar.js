@@ -7,13 +7,15 @@ import ProfilePhoto from './profilePhoto/profilePhoto';
 
 const navbar = props => {
     return (
-        <div className={classes.navbar}>
+        <nav className={classes.navbar}>
             <Banner />
-            <Menu />
-            <div className={classes.profilePhoto}>
-                <ProfilePhoto />
+            <div className={classes.menuWithPhotoContainer}>
+                <Menu />
+                <div className={classes.profilePhoto}>
+                    <ProfilePhoto />
+                </div>
             </div>
-        </div>
+        </nav>
     );
 }
 

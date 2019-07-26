@@ -1,29 +1,50 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import LoadingImage from './loadingImage/loadingImage';
 import classes from './gallery.module.css';
 import * as actions from '../../store/actions/actions';
 
 const Gallery = props => {
-
     useEffect(() => {
         if (!props.images) {
             props.onFetchImages();
         }
-        if (props.error)
+        if (props.error) {
             alert("An error occured");
             console.log("An error occured: ", props.error);
+        }
     }, []);
 
     let images = [];
-    for (let i = 0; i < 9; i++) {
-        images.push(<LoadingImage />);
+    
+    const showLoadingImages = (count) => {
+        for (let i = 0; i < count; i++) {
+            images.push(<LoadingImage key={i} />);
+        }
+    }
+    
+    const showFetchedImages = () => {
+        images = props.images.map(obj => {
+            return (
+                <div 
+                    key={obj.thumbLink}
+                    className={classes.imageContainer} 
+                    onClick={() => window.open(obj.fullLink)}>
+                    <LazyLoadImage 
+                        src={obj.thumbLink}
+                        alt="thumb image" 
+                        effect="blur"/>
+                </div>
+            );
+        });
     }
 
+    showLoadingImages(9);
+    
     if (props.images) {
-        images = props.images.map(obj => {
-            return <img src={obj.thumbLink} alt="thumb image" onClick={() => window.open(obj.fullLink)} />
-        });
+        showFetchedImages();
     }
 
     return (

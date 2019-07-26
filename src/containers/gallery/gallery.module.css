@@ -2,6 +2,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    min-height: 500px;
+    min-height: 500px; /*to extend placeholders*/
     grid-gap: 2.5em;
+}
+
+.imageContainer {
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+}
+
+.imageContainer span {
+    cursor: pointer;
+}
+
+@media (max-width: 899px) {
+    .imagesContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 699px) {
+    .imagesContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        min-height: 1200px;
+    }
 }

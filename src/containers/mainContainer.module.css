@@ -1,7 +1,6 @@
 .mainContainer {
     width: 900px;
-    margin: 0px;
-    padding: 0px;
+    padding: 0 0 30px 0;
     margin: 0 auto;
 }
 
@@ -10,3 +9,14 @@
     margin: 0 auto;
 }
 
+@media (max-width: 899px) {
+    .mainContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 399px) {
+    .mainContainer {
+        width: 375px;
+    }
+}
